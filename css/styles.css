@@ -1,0 +1,15 @@
+*{margin: 0;
+padding: 0;
+color: antiquewhite;}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image:url(../assets/imagenes/Ecommerce-1024x683.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+header {
+    height: 20%;
+}
+
+button {background-color: rgba(0, 0, 0, 0.439);}

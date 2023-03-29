@@ -31,9 +31,9 @@ function listaDeProductos (){
  for (const producto of productos){
     let seccion = document.createElement ('div')
     seccion.innerHTML = `
-    <h3> ${producto.nombre}<h3/>
-    <img src="./assets/imagenes/45069787-retro-sencilla-metálica-vector-blanco-y-negro-estilizado-cesta-de-la-vendimia-completa-con-productos.webp" class="img-thumbnail" alt="imagen de producto">
-    <p> $${producto.precio} <p/>
+    <h3> ${producto.nombre}</h3>
+    <img src="./assets/imagenes/45069787-retro-sencilla-metálica-vector-blanco-y-negro-estilizado-cesta-de-la-vendimia-completa-con-productos.webp" class="img-thumbnail" alt="imagen de producto" />
+    <p> $${producto.precio} </p>
     <button class="botonAgregar" id="${producto.id}">AGREGAR AL CARRITO</button>
     `
 

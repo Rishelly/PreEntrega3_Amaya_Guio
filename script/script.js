@@ -38,6 +38,8 @@ function listaDeProductos (){
     <p> $${producto.precio} <p/>
     <button class="button btn mt-3 p-1 rounded" id="${producto.codigo}">AGREGAR AL CARRITO</button>
     `
+
+    seccion.className = 'col-3 m-1 p-1'
     let lista = document.getElementById ('listaProductos')
     lista.append(seccion)
     let btnAgregar = document.getElementById (`${producto.codigo}`)

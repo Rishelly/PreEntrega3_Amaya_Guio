@@ -7,6 +7,14 @@ body {
     background-image:url(../assets/imagenes/Ecommerce-1024x683.jpg);
     background-repeat:no-repeat;
     background-size:cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+#identificacion {
+ background-color: #00000077;
+ margin: 0;
+ padding: 0;
 }
 .icono {
     width: 50px;

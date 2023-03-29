@@ -1,3 +1,23 @@
+let formularioId =
+document.getElementById("identificacion");
+formularioId.addEventListener ('submit', validarIdentidad);
+
+let input1 = document.getElementById("nombre")
+input1.addEventListener("change", () => {sessionStorage.setItem("nombre", input1.value)})
+let input2 = document.getElementById("apellido")
+input2.addEventListener("change", () => {sessionStorage.setItem("apellido", input2.value)})
+let input3 = document.getElementById("telefono")
+input3.addEventListener("change", () => {sessionStorage.setItem("telefono", input3.value)})
+
+function validarIdentidad (e){
+    e.preventDefault ();
+    Swal.fire(
+        'Ha salido bien!',
+        'Identidad validada éxitosamente',
+        'success'
+      )
+}
+
 const productos = [
     { codigo: 0, nombre: "PRODUCTO 1", precio: 150}, 
     { codigo: 1, nombre: "PRODUCTO 2", precio: 500},
@@ -6,13 +26,6 @@ const productos = [
     { codigo: 4, nombre: "PRODUCTO 5", precio: 1050}, 
     { codigo: 5, nombre: "PRODUCTO 6", precio: 900},
 ]
-/*
-function cliente (nombre, apellido, numeroTel) {
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.numeroTel = numeroTel;
-}
-const cliente1 = new cliente (prompt ("Nombre:"), prompt ("Apellido:"), prompt("Número telefónico:"));*/
 
 function listaDeProductos (){
  for (const producto of productos){

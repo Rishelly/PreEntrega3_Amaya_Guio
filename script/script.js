@@ -78,7 +78,6 @@ const mostrarHtml = () => {
         const contenedorProducto = document.createElement('div')
         contenedorProducto.classList.add('productoCarrito')
         contenedorProducto.innerHTML = `
-        <div class="productoCarrito p-1 m-2">
             <div class="info-prod-carrito d-flex flex-row justify-content-evenly p-1">
                 <span class="cantidad-producto-carrito">${prodc.cantidad}</span>
                 <p class="titulo-producto-carrito">${prodc.nombre}</p>
@@ -87,9 +86,8 @@ const mostrarHtml = () => {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </div>
-        </div>
         `
-        let carrito = document.getElementById ('filaDeProducto')
-        carrito.append(contenedorProducto)
+        let agregar = document.getElementById ('filaDeProducto')
+        agregar.append(contenedorProducto)
     })
 }

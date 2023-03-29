@@ -8,7 +8,46 @@ body {
     background-repeat:no-repeat;
     background-size:cover;
 }
+.icono {
+    width: 50px;
+    height: 50px;
+    stroke: #000;
+}
+.quitar {
+    width: 25px;
+    height: 25px;
+}
+.quitar:hover {
+    cursor: pointer;
+    stroke: red;
 
+}
+.iconoCarrito{
+    position: relative !important;
+}
+.iconoCarrito:hover {
+    cursor: pointer;
+}
+
+.hidden-carrito {
+    display: none !important;
+}
+.contador {
+    position: absolute !important;
+    top: 55%;
+    left: 1;
+    background-color: #000;
+    color: white;
+    width: 20px;
+    height: 20px;
+} 
+.contenedor-de-carrito {
+    position: absolute !important;
+    background-color: rgba(0, 0, 0, 0.495) !important;
+    color: white !important;
+    width: 400px;
+    z-index: 1;
+}
 
 button {
     background-color: rgba(0, 0, 0, 0.439)!important;

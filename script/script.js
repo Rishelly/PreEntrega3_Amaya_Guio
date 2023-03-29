@@ -12,8 +12,8 @@ input3.addEventListener("change", () => {sessionStorage.setItem("telefono", inpu
 function validarIdentidad (e){
     e.preventDefault ();
     Swal.fire(
-        'Ha salido bien!',
-        'Identidad validada éxitosamente',
+        'Éxito',
+        'Identidad, confirmada',
         'success'
       )
 }
@@ -27,6 +27,8 @@ const productos = [
     { codigo: 5, nombre: "PRODUCTO 6", precio: 900},
 ]
 
+const carrito = []
+
 function listaDeProductos (){
  for (const producto of productos){
     let seccion = document.createElement ('section')
@@ -34,17 +36,24 @@ function listaDeProductos (){
     <h3 class="py-3 m-1"> ${producto.nombre} <h3/>
     <img src="./assets/imagenes/45069787-retro-sencilla-metálica-vector-blanco-y-negro-estilizado-cesta-de-la-vendimia-completa-con-productos.webp" class="img-thumbnail" alt="imagen de producto">
     <p> $${producto.precio} <p/>
-    <button class="button btn mt-3 p-1 rounded" id="btn${producto.codigo}">AGREGAR AL CARRITO</button>
+    <button class="button btn mt-3 p-1 rounded" id="${producto.codigo}">AGREGAR AL CARRITO</button>
     `
     let lista = document.getElementById ('listaProductos')
     lista.append(seccion)
-    let btnAgregar = document.getElementById (`btn${producto.codigo}`)
+    let btnAgregar = document.getElementById (`${producto.codigo}`)
     btnAgregar.addEventListener ("click", agregarAlCarrito)
 
-    function agregarAlCarrito (){
-
+    function agregarAlCarrito (e){
+console.log(producto.codigo)
     }
     agregarAlCarrito ()
  }
 }
 listaDeProductos ()
+
+const btnCarrito = document.querySelector('.iconoCarrito')
+const containerCarrito = document.querySelector('.contenedor-de-carrito')
+
+btnCarrito.addEventListener('click',() => {
+    containerCarrito.classList.toggle('hidden-carrito')
+})

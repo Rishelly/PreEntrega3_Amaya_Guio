@@ -42,14 +42,41 @@
       </div> 
     </header>
     <main class="container">
-        <div class="row text-center d-flex">
+        <div class="row text-center d-flex ">
             <section class="col d-flex flex-column flex-lg-row align-items-center justify-content-evenly" id="listaProductos">
 
             </section>
 
         </div>
-        <div class="row text-center">
-            <h3>CARRITO</h3>
+        <div class="row">
+            <h3 class="text-center">CARRITO</h3>
+            <div class="iconoCarrito">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                </svg>
+                <div class="contador d-flex justify-content-center align-items-center rounded-circle">
+                    <span id="contador">0</span>
+                </div>
+                <div class="contenedor-de-carrito hidden-carrito rounded d-flex flex-column">
+                    <div class="productoCarrito p-1 m-2">
+                        <div class="info-prod-carrito d-flex flex-row justify-content-evenly p-1">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">productox</p>
+                            <span class="precio-carrito-producto">$40</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="quitar">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="totalCarrito m-1 p-1 text-center">
+                        <h3>TOTAL:</h3>
+                        <span class="total-pagar">$200</span>
+                    </div>
+                </div>
+                  
+            </div>
         </div>
     </main>
     <footer class="container">

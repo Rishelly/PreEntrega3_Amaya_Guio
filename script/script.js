@@ -29,17 +29,18 @@ const productos = [
 
 function listaDeProductos (){
  for (const producto of productos){
-    let seccion = document.createElement ('section')
+    let seccion = document.createElement ('div')
     seccion.innerHTML = `
-    <h3 class="py-3 m-1"> ${producto.nombre} <h3/>
+    <h3> ${producto.nombre}<h3/>
     <img src="./assets/imagenes/45069787-retro-sencilla-metálica-vector-blanco-y-negro-estilizado-cesta-de-la-vendimia-completa-con-productos.webp" class="img-thumbnail" alt="imagen de producto">
     <p> $${producto.precio} <p/>
-    <button class="botonAgregar btn mt-3 p-1 rounded" id="${producto.id}">AGREGAR AL CARRITO</button>
+    <button class="botonAgregar" id="${producto.id}">AGREGAR AL CARRITO</button>
     `
 
     seccion.className = 'col-3 m-1 p-1'
     let lista = document.getElementById ('listaProductos')
     lista.append(seccion)}
+
 }
 listaDeProductos ()
 
@@ -54,10 +55,10 @@ const infoCarrito = document.querySelector('.productoCarrito')
 const filaProducto = document.querySelector('.filaDeProducto')
 
 let stock = document.getElementById('listaProductos')
-let carrito = []
 
 stock.addEventListener('click', e=> {
     if(e.target.classList.contains('botonAgregar')){
-            console.log(e.target.id)
+        console.log (e.target.parentElement)
     }
-} )
+})
+

@@ -56,38 +56,13 @@ const filaProducto = document.querySelector('.filaDeProducto')
 
 let stock = document.getElementById('listaProductos')
 
-let todosLosProductos = []
+const carrito = []
 
 stock.addEventListener('click', e=> {
     if(e.target.classList.contains('botonAgregar')){
-        const prodc =e.target.parentElement
+        const productoAgregar = e.target.parentElement
 
-        const infoProdc = {
-            cantidad: 1,
-            nombre: prodc.querySelector('h3').textContent,
-            precio: prodc.querySelector('p').textContent,
-        }
-       todosLosProductos =[...todosLosProductos, infoProdc]
-
-       mostrarHtml()
+        carrito.push (productoAgregar.querySelector('h3').textContent)
+        console.log(carrito)
     }
 })
-
-const mostrarHtml = () => {
-    todosLosProductos.forEach(prodc =>{
-        const contenedorProducto = document.createElement('div')
-        contenedorProducto.classList.add('productoCarrito')
-        contenedorProducto.innerHTML = `
-            <div class="info-prod-carrito d-flex flex-row justify-content-evenly p-1">
-                <span class="cantidad-producto-carrito">${prodc.cantidad}</span>
-                <p class="titulo-producto-carrito">${prodc.nombre}</p>
-                <span class="precio-carrito-producto">${prodc.precio}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="quitar">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </div>
-        `
-        let agregar = document.getElementById ('filaDeProducto')
-        agregar.append(contenedorProducto)
-    })
-}
